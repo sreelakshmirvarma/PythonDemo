@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<h1 class="text-center"> Make an Appoinment </h1>
+<hr>
+<div class="container w-55 text-left p-3  my-5 bg-info ">
+    <form action="{% url 'save' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-primary mb=4" type="submit"> Submit</button>
+    </form>   
+       
+<br>
+
+
+</form>
+</div>
+{% endblock %}
