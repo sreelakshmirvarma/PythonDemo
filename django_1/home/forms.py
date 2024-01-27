@@ -19,5 +19,6 @@ class BookingForm(forms.ModelForm):
             'p_email':"Email Id:",
             'doc_name': "Doctor Name:",
             'booking_date': "Bokking Date:",
+            'gender':"Gender:",
             
         }

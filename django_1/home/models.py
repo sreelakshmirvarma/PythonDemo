@@ -25,3 +25,9 @@ class Booking(models.Model):
     doc_name =models.ForeignKey(Doctors, on_delete=models.CASCADE)
     booking_date =models.DateField()
     booked_on = models.DateField(auto_now=True)
+    GENDER_CHOICES = [
+        ('male', 'Male'),
+        ('female', 'Female'),
+        ('other', 'Other'),
+    ]
+    gender=models.CharField(max_length=15, choices=GENDER_CHOICES, default='unknown')
